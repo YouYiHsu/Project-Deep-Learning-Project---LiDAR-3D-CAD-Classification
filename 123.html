@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>onclick event example</title>
+    <script>
+      function initElement() {
+        var alert = document.getElementById("foo");
+        alert.onclick = showAlert;
+      };
+      function showAlert(event) {
+        alert("onclick Event detected!");
+      }
+    </script>
+    <style>
+      #foo {
+        border: solid blue 2px;
+      }
+    </style>
+  </head>
+  <body onload="initElement();">
+    <input type="button" id="foo" value="My Event Element" >
+    <p>click on the above element.</p>
+  </body>
+</html>

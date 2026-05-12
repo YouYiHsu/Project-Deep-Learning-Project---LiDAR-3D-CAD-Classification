@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>人員臉部照片註冊系統</title>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="/public/image/icon.ico" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+  <link rel="stylesheet" href="jqueryui/style.css">
+</head>
+
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <form action="http://192.168.15.52:8081/choose" method="POST">
+    <nav>
+      <div style="text-align:center;" class="title"><img src="/public/image/icon.png" width="80" height="80">
+        <br><strong>人員臉部照片註冊網站</strong>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="wrap">
+            <hr>
+            <h2><strong>管理員登入</strong></h2>
+            <label for="text">請輸入帳號</label>
+            <input type="text" name="account" class="logintext" placeholder="請輸入帳號" required><br><br>
+            <label for="text">請輸入密碼</label>
+            <input type="password" name="password" class="loginpassword" placeholder="請輸入密碼" required><br>
+            <div id="btn">
+              <br>
+              <input type="submit" value="登入" class="logIn">
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <p class="copyright">Copyright &copy; 2021 Eddie Hsu.&ensp;</p>
+  </form>
+  <script lang="javascript">
+            (() => {
+            if (window.localStorage) {
+                if (!localStorage.getItem('reload')) {
+                    localStorage['reload'] = true;
+                    window.location.reload();
+                } else {
+                    localStorage.removeItem('reload');
+                }
+            }
+        })();
+  </script>
+</body>
+
+</html>

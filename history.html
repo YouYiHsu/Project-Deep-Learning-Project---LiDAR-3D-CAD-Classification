@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>查看歷史</title>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/public/image/icon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
+    <script src="//apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="jqueryui/style.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+    <script>
+        $(function () {
+            $("#datepicker").datepicker({
+                changeMonth: true,
+                changeYear: true
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <form action="http://localhost:8081/history/viewhistory" method="GET">
+        <nav>
+            <div>
+                <div style="text-align:center;" class="datetitle"><strong><br>--歷史紀錄查詢--</strong></div>
+            </div>
+
+            <div class="wrap">
+                <p class="choosedate"><strong>請選擇想要的日期</strong></p>
+                <h1>日期：<input type="text" class="datetext" name="datetext" id="datepicker"></h1>
+                <div id="btndate">
+                    <input type="submit" value="搜尋" class="date">
+                </div>
+            </div>
+        </nav>
+    </form>
+
+    <form action="http://localhost:8081/choose" method="POST">
+        <nav>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="wrap">
+                        <div id="btn5">
+                            <br>
+                            <input type="submit" value="回到選擇" class="choose">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <br>
+        <p class="copyright1">Copyright &copy; 2021 Eddie Hsu.&ensp;</p>
+    </form>
+</body>
+</html>

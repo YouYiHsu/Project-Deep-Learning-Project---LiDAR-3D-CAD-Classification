@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>選擇功能</title>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="/public/image/icon.ico" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+</head>
+
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <form action="http://localhost:8081/upload" method="POST">
+    <nav>
+      <div class="choosetitle"><strong><br>--請選擇功能--</strong></div>
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="wrap">
+            <div id="btn4">
+              <br>
+              <input type="submit" value="上傳圖片" class="upload">
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </form>
+
+  <form action="http://localhost:8081/history" method="POST">
+    <nav>
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="wrap">
+            <div id="btn3">
+              <br>
+              <input type="submit" value="查看歷史" class="history">
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <p class="copyright1">Copyright &copy; 2021 Eddie Hsu.&ensp;</p>
+  </form>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+//var user ;
+//var password ;
+
+     
+    /* //新增資料
+     var sqlInsert = 'INSERT INTO User(user,password) VALUES (?,?)';
+     db.run(sqlInsert, [user, password]);
+     console.log('insert success');
+   
+     //查詢資料
+     var sqlSELEC = 'SELECT rowid AS id,user,password FROM User';
+     db.each(sqlSELEC,[user,password], function (err, row) {
+       console.log(user,password);
+     });
+   
+     //更新資料
+     var sqlUPDATE = 'update User set user = ? where user = ?';
+     db.run(sqlUPDATE);
+     console.log('update');
+   
+     //查詢更新後的資料
+     var sqlUpdateSearch =
+       'SELECT rowid AS id , user ,createTime FROM User where user =?';
+     db.each(sqlUpdateSearch,  function (err, row) {
+       console.log(row.id + ': ' + row.name);
+     });
+   
+     //刪除資料
+     var sqlDel = 'delete from User ';
+     db.run(sqlDel);
+   
+   
+   db.close();  //資料庫關閉*/
+
+
+/*   db.each(sql02, (err, row) => {
+
+    if (err) {
+      console.error(err.message);
+    }
+    //dateselect.push(row.date1); 
+    herfselect.push(row.herf);
+    contentselect.push(row.content);
+    //return row
+  });*/
+
+
+
+   res.render(__dirname + "/" + "viewhistory.ejs", {
+            searchdate: showdate,
+            content1: contentselect1,
+            content2: contentselect2,
+            picture1: herfselect1, 
+            picture2: herfselect2,
+            
+          });
+          console.log(contentselect1, contentselect2,herfselect1,herfselect2);
+          contentselect2 = [];
+          herfselect2 = [];
+          contentselect1 = [];
+          herfselect1 = [];
+          console.log("查看歷史畫面");
